@@ -9,7 +9,7 @@
 
 class SoftwareSPI {
 public:
-    SoftwareSPI(byte, byte, byte, byte);
+    SoftwareSPI(byte, byte, byte, byte,byte=1,byte=1);
     void begin();
     byte transfer(byte);
     void select();
@@ -20,6 +20,7 @@ private:
     byte _pin_mosi;
     byte _pin_miso;
     byte _pin_cs;
+    byte _cpha,_cpol;
 };
 
 #endif
